@@ -9,6 +9,11 @@ pip install -r /path/to/requirements.txt
 
 This requires an App Password if using gmail which can be created [here](https://myaccount.google.com/apppasswords)
 
+## Configuration
+Set the URL for google flight you want to track
+Enter your email and password that you want to use to send notifications
+Set current price you want to compare against
+
 ## Cell Phone Details to enable text notifications
 |Provider|Gateway|
 |--------|-------|
