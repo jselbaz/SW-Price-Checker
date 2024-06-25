@@ -9,11 +9,6 @@ pip install -r /path/to/requirements.txt
 
 This requires an App Password if using gmail which can be created [here](https://myaccount.google.com/apppasswords)
 
-## Configuration
-Set the URL for google flight you want to track
-Enter your email and password that you want to use to send notifications
-Set current price you want to compare against
-
 ## Cell Phone Details to enable text notifications
 |Provider|Gateway|
 |--------|-------|
@@ -27,3 +22,6 @@ Set current price you want to compare against
 |Tracfone|@mmst5.tracfone.com|
 |U.S. Cellular|@email.uscc.net|
 |Virgin Mobile|@vmobl.com|
+
+## Automation
+I recommend making a cron job or scheduling a batch file to run this every few hours
