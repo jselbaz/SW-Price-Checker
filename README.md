@@ -44,7 +44,7 @@ Add RecipientCell, RecipientEmail, SenderEmail, and SenderEmailAppPassword as pa
 Note that all shell scripts may need to be changed from CRLF to LF as Github changes them.
 
 ## Credit
-Special thanks to [wbyte-selenium-lambda](https://github.com/wbytedev/wbyte-selenium-lambda/blob/main/src/chrome-installer.sh) for their script on etting the latest stable version of chrome and driver to ensure compatibility with selenium.
+Special thanks to [wbyte-selenium-lambda](https://github.com/wbytedev/wbyte-selenium-lambda/blob/main/src/chrome-installer.sh) for their script on downloading the latest stable version of chrome and drivers to ensure compatibility with selenium.
 
 ## Future Work
 Add a front end
