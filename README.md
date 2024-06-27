@@ -31,9 +31,13 @@ If using the containerized version you can schedule a lambda to run every few ho
 ## Container + Lambda + DDB + SSM Set Up
 Upload image to ECR
 
+```
 docker build -f Dockerfile.dockerfile -t price-checker .
+
 docker tag price-checker:latest AWS_ACCOUNT.dkr.ecr.us-east-1.amazonaws.com/price-checker:latest
+
 docker push AWS_ACCOUNT.dkr.ecr.us-east-1.amazonaws.com/price-checker:latest
+```
 
 Create a new Lambda from the container image in this repo
 Architecture: x86_64
