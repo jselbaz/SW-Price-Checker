@@ -40,9 +40,13 @@ docker push AWS_ACCOUNT.dkr.ecr.us-east-1.amazonaws.com/price-checker:latest
 ```
 
 Create a new Lambda from the container image in this repo
+
 Architecture: x86_64
+
 Make sure to update the Lambda role so it has IAM permissions to read/write to DDB and read from SSM
+
 Create a dynamoDB table to track price changes. Table's primary key should be an integer field called flight. Add an integer attribute field called price to the table as well.
+
 Add RecipientCell, RecipientEmail, SenderEmail, and SenderEmailAppPassword as parameters in SSM.
 
 Note that all shell scripts may need to be changed from CRLF to LF as Github changes them.
