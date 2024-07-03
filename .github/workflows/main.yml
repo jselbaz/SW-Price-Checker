@@ -36,6 +36,5 @@ jobs:
       ECR_REPOSITORY: ${{ secrets.REPO_NAME }}
       IMAGE_TAG: latest
      run: |
-      cd price_check_lambda
       docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
       docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
