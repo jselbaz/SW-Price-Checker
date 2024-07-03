@@ -128,9 +128,7 @@ def lambda_handler(event, context):
     driver.close()
     driver.quit()
 
-    print("test")
-
     return {
         "statusCode": 200,
-        "body": "Prices checked"
+        "body": "Prices checked!"
     }
