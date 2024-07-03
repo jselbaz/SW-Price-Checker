@@ -12,6 +12,10 @@ jobs:
   permissions:
    id-token: write
    contents: read
+  defaults:
+   run:
+    working-directory: ./price_check_lambda
+   
   steps:
    - name: Checkout
      uses: actions/checkout@v2
@@ -28,12 +32,12 @@ jobs:
      uses: aws-actions/amazon-ecr-login@v1
 
    - name: Build, tag, and push the image to Amazon ECR
+     
      id: build-image
      env:
       ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
       ECR_REPOSITORY: ${{ secrets.REPO_NAME }}
       IMAGE_TAG: latest
-     working-directory: ./price_check_lambda
      run: |
       docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
       docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
