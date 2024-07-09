@@ -36,6 +36,6 @@ jobs:
       ECR_REPOSITORY: ${{ secrets.REPO_NAME }}
       IMAGE_TAG: latest
      run: |
-      cd price_check_lambda
-      docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+      docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f Dockerfile.dockerfile .
       docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+      aws lambda update-function-code --function-name ${{ secrets.LAMBDA_FUNCTION_NAME }} --image-uri ${{ secrets.IMAGE_URI }}

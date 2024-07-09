@@ -53,10 +53,3 @@ Note that all shell scripts may need to be changed from CRLF to LF as Github cha
 
 ## Credit
 Special thanks to [wbyte-selenium-lambda](https://github.com/wbytedev/wbyte-selenium-lambda/blob/main/src/chrome-installer.sh) for their script to download the latest stable version of chrome and drivers to ensure compatibility with selenium.
-
-## Future Work
-Add a CI/CD pipeline to automate containerizing and uploading new changes to ECR and Lambda
-
-Add a front end (maybe)
-
-Terraform the AWS set up (maybe)

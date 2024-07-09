@@ -9,6 +9,7 @@ RUN dnf install -y atk cups-libs gtk3 libXcomposite alsa-lib \
 COPY ./chrome-installer.sh ./chrome-installer.sh
 COPY ./requirements.txt .
 
+RUN chmod +rx ./chrome-installer.sh
 RUN ./chrome-installer.sh
 RUN rm ./chrome-installer.sh
 
