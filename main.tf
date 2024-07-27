@@ -67,11 +67,11 @@ resource "aws_scheduler_schedule" "FlightPriceCheckLambdaSchedule" {
     mode = "OFF"
   }
 
-  schedule_expression = "cron(0 */6 * * *)"
+  schedule_expression = "cron(0 */6 ? * * *)"
 
   schedule_expression_timezone = "America/New_York"
 
-  start_date = "2024-07-27T05:44:00Z"
+  start_date = "2024-07-27T05:50:00Z"
 
   target {
     arn      = aws_lambda_function.docker-price-checker_tf.arn
