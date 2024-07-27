@@ -16,6 +16,31 @@ jobs:
   steps:
    - name: Checkout
      uses: actions/checkout@v2
+
+   - name: Setup Terraform with specified version on the runner
+     uses: hashicorp/setup-terraform@v2
+     with:
+      terraform_version: 1.9.0
+    
+   - name: Terraform init
+     id: init
+     env:
+      BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE}}
+     run: terraform init -backend-config="bucket=$BUCKET_TF_STATE"
+
+   - name: Terraform plan
+     id: plan
+     if: github.event_name == 'pull_request'
+     run: terraform plan -no-color -input=false
+     continue-on-error: true
+
+   - name: Terraform Plan Status
+     if: steps.plan.outcome == 'failure'
+     run: exit 1
+ 
+   - name: Terraform Apply
+     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+     run: terraform apply -auto-approve -input=false
      
    - name: Configure AWS Credentials Action for GitHub Actions
      uses: aws-actions/configure-aws-credentials@v4.0.2
