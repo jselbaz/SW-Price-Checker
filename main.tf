@@ -26,11 +26,11 @@ resource "aws_lambda_function" "docker-price-checker_tf" {
     variables = {
       FLIGHT1 = "4501",
       FLIGHT2 = "3157",
-      FLIGHT3 = "2343"
+      FLIGHT3 = "3215"
       FLIGHT4 = "4525" 
       URL1 = "https://www.google.com/travel/flights/booking?tfs=CBwQAhpGEgoyMDI0LTEwLTE1IiAKA0xHQRIKMjAyNC0xMC0xNRoDREFMKgJXTjIENDUwMWoNCAISCS9tLzAyXzI4NnIHCAESA0RBTEABSAFwAYIBCwj___________8BmAEC",
       URL2 = "https://www.google.com/travel/flights/booking?tfs=CBwQAhpGEgoyMDI0LTEwLTIyIiAKA0RBTBIKMjAyNC0xMC0yMhoDTEdBKgJXTjIEMzE1N2oHCAESA0RBTHINCAISCS9tLzAyXzI4NkABSAFwAYIBCwj___________8BmAEC"
-      URL3 = "https://www.google.com/travel/flights/booking?tfs=CBwQAhpAEgoyMDI0LTA5LTE2IiAKA1BIWBIKMjAyNC0wOS0xNhoDREFMKgJXTjIEMjM0M2oHCAESA1BIWHIHCAESA0RBTEABSAFwAYIBCwj___________8BmAEC"
+      URL3 = "https://www.google.com/travel/flights/booking?tfs=CBwQAhpAEgoyMDI0LTA5LTE2IiAKA1BIWBIKMjAyNC0wOS0xNhoDREFMKgJXTjIEMzIxNWoHCAESA1BIWHIHCAESA0RBTEABSAFwAYIBCwj___________8BmAEC"
       URL4 = "https://www.google.com/travel/flights/booking?tfs=CBwQAhpAEgoyMDI0LTA5LTIyIiAKA0RBTBIKMjAyNC0wOS0yMhoDTEdBKgJXTjIENDUyNWoHCAESA0RBTHIHCAESA0xHQUABSAFwAYIBCwj___________8BmAEC"
     }
   }
