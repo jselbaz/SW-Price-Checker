@@ -102,7 +102,7 @@ def lambda_handler(event, context):
     for flight in flights:
         driver.get(flight['url'])
         driver.implicitly_wait(15)
-        price = driver.find_element(By.CLASS_NAME, "tZe0ff").text
+        price = driver.find_element(By.CLASS_NAME, "ScwYP").text
         price = price[1:]
         price = int(price)
 
