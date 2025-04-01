@@ -25,9 +25,9 @@ resource "aws_lambda_function" "docker-price-checker_tf" {
   environment {
     variables = {
       FLIGHT1 = "747",
-      FLIGHT2 = "4472",
+      FLIGHT2 = "1370",
       URL1 = "https://www.google.com/travel/flights/booking?tfs=CBwQAho_EgoyMDI1LTA0LTA0Ih8KA0xHQRIKMjAyNS0wNC0wNBoDREFMKgJXTjIDNzQ3agcIARIDTEdBcgcIARIDREFMQAFIAXABggELCP___________wGYAQI",
-      URL2 = "https://www.google.com/travel/flights/booking?tfs=CBwQAhpAEgoyMDI1LTA0LTIyIiAKA0RBTBIKMjAyNS0wNC0yMhoDTEdBKgJXTjIENDQ3MmoHCAESA0RBTHIHCAESA0xHQUABSAFwAYIBCwj___________8BmAEC"
+      URL2 = "https://www.google.com/travel/flights/booking?tfs=CBwQAhpAEgoyMDI1LTA0LTE2IiAKA0RBTBIKMjAyNS0wNC0xNhoDTEdBKgJXTjIEMTM3MGoHCAESA0RBTHIHCAESA0xHQUABSAFwAYIBCwj___________8BmAEC"
     }
   }
 }
